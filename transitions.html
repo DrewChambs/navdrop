@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transitions</title>
+
+  <style>
+
+    * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      div {
+         margin-bottom: 10px;
+         /* color: #fff; */
+         font-family: sans-serif;
+         /* text-transform: uppercase; */
+      }
+      p {
+        padding-top: 5px;
+      }
+      .main-div {
+        display: flex;
+        justify-content: space-around;
+        color: #fff;
+        border: none;
+      }
+      /* **************** */
+      .div1, .div2, .div3 {
+        border: 3px solid #000;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .div1 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: height 2s;
+      }
+      .div1:hover {
+        height: 200px;
+      }
+      /* **************** */
+      .div2 {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        transition: width 1s, height 3s;
+      }
+      .div2:hover {
+        width: 200px;
+        height: 300px;
+      }
+      /* ********************** */
+      .div3 {
+        width: 150px;
+        height: 150px;
+        background: green;
+        transition: width 2s, height 2s, transform 5s;
+      }
+      .div3:hover {
+        width: 300px;
+        height: 300px;
+        transform: rotate(360deg);
+      }
+/* ************************************************ */
+      .tranz {
+        color: #fff;
+        padding-bottom: 25em;
+      }
+      .div4, .div5, .div6, .div7, .div8 {
+        background: #788f72;
+        width: 150px;
+        height: 100px;
+        border: 3px solid #000;
+        text-align: center;
+        padding-top: 15px;
+        border-radius: 5px;
+        transition: width 1.5s;
+
+      }
+      .div4 {transition-timing-function: linear;}
+      .div5 {transition-timing-function: ease;}
+      .div6 {transition-timing-function: ease-in;}
+      .div7 {transition-timing-function: ease-out;}
+      .div8 {transition-timing-function: ease-in-out;}
+/* **************************************************** */
+      .div4:hover, .div5:hover,
+      .div6:hover,
+      .div7:hover, .div8:hover {
+        width: 600px;
+      }
+</style>
+</head>
+<body>
+  <h1>transition() examples</h1>
+  <h2>April 29, 2021</h2>
+
+<div class="main-div">
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div class="div3">
+    <p>This is the top!</p>
+  </div>
+</div>
+
+<div class="timing">
+  <h1>transition-timing-function examples</h1>
+</div>
+<div class="tranz">
+  <div class="div4">div4 linear</div>
+  <div class="div5">div5 ease</div>
+  <div class="div6">div6 ease-in</div>
+  <div class="div7">div7 ease-out</div>
+  <div class="div8">div8 ease-in-out</div>
+</div>
+
+
+</body>
+</html>
