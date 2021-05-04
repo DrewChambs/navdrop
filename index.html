@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NavbarGit</title>
+  <style>
+/******* GLOBAL STYLES 4/28/2021 ************ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      /* outline: 1px solid red; */
+    }
+    :root {
+      font-family: sans-serif;
+      --clw: #fff;
+      --clb: #000;
+      --bxs: 0px 8px 10px -10px #888888;
+    }
+    body {
+      line-height: 2em;
+    }
+    .dropx {
+      font-size: 2em;
+      font-weight: bold;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .header {
+      padding-top: 15px;
+      position: relative;
+      /* background: lightgreen; */
+      display: flex;
+      justify-content: space-around;
+      box-shadow: var(--bxs);
+    }
+    .navigation {
+      height: 0;
+      display: flex;
+      overflow: hidden;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      transition: .5s;
+    }
+    ul li {
+      border-bottom: 1px solid #fff;
+    }
+    ul li a {
+      padding-left: 30px;
+    }
+    li a {
+      list-style: none;
+      padding: 10px 0 10px .7rem;
+    }
+    li:last-of-type {
+      border-bottom: none;
+    }
+    a {
+      text-decoration: none;
+      color: #848a87;
+    }
+    .navigation a {
+      display: block;
+      width: 100vw;
+      transition: .5s;
+    }
+    .navigation a:hover {
+      background: lightblue;
+      color: darkgrey;
+      font-size: 1.2em;
+    }
+    .main-content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      transition: .5s;
+    }
+    .social {
+      display: none;
+    }
+    .social li {
+      list-style: none;
+    }
+    .show-links {
+      height: 13.188rem;
+    }
+    .lowermain {
+      margin-top: 13.188rem;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">FlexBoxNav2</h1>
+    <button class="dropx">X</button>
+    <nav class="navigation">
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+      <ul class="social">
+        <li><a href="#">FB</a></li>
+        <li><a href="#">Bē</a></li>
+        <li><a href="#">IN</a></li>
+        <li><a href="#">TW</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content">
+    <h2>Tester</h2>
+    <p class="main-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nihil tenetur nulla culpa laudantium quasi rem. Aut assumenda, magni illum odit eos, perferendis ipsa impedit. Nostrum possimus doloribus delectus asperiores accusamus non libero incidunt sequi eaque architecto, ullam qui repellendus iusto voluptates blanditiis maiores soluta quaerat unde, a labore placeat autem nulla reiciendis ea. Harum ipsum veritatis asperiores provident vero impedit vitae officia alias soluta recusandae neque a, voluptates voluptatibus nulla repellendus repudiandae dolorem odio accusamus autem corporis quas voluptas fugit! Ipsam voluptates ducimus, odio tenetur sed minus consequuntur ex excepturi velit beatae. Saepe molestias quas aliquid est? Vero, cum.
+    </p>
+
+  </main>
+  <footer class="footer">
+
+  </footer>
+<script>
+      const nav = document.querySelector(".dropx");
+      const navigation = document.querySelector(".navigation");
+      const contentpage = document.querySelector(".main-content");
+      nav.addEventListener("click", function() {
+        navigation.classList.toggle("show-links");
+        contentpage.classList.toggle("lowermain");
+      });
+</script>
+</body>
+</html>
