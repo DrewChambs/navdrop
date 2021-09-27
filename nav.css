@@ -48,6 +48,7 @@ li:last-of-type {
   border-bottom: none;
 }
 a {
+  text-transform: capitalize;
   text-decoration: none;
   color: #848a87;
 }
@@ -57,7 +58,7 @@ a {
   transition: 0.5s;
 }
 .navigation a:hover {
-  background: lightblue;
+  background: rgb(13, 50, 63);
   color: darkgrey;
   font-size: 1.2em;
 }
