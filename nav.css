@@ -16,14 +16,7 @@
 body {
   line-height: 2em;
 }
-.dropx {
-  /* font-size: 2em; */
-  /* font-weight: bold; */
-  /* cursor: pointer; */
-  /* background: none; */
-  /* border: none; */
-  /* transform: rotate(50deg); */
-}
+
 .header {
   padding-top: 15px;
   position: relative;
@@ -87,11 +80,13 @@ a {
 .lowermain {
   margin-top: 18rem;
 }
+/********** HAMBURGER ************/
+
 .navtoglab span,
 .navtoglab span::before,
 .navtoglab span::after {
   position: relative;
-  display: block;
+  display: none;
   background: #000;
   height: 4px;
   width: 2em;
@@ -106,4 +101,12 @@ a {
 }
 .navtoglab span::after {
   top: 7px;
+}
+/******* END HAMBURGER ************/
+@media (max-width: 600px) {
+  .navtoglab span,
+  .navtoglab span::before,
+  .navtoglab span::after {
+    display: block;
+  }
 }
