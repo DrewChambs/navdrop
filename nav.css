@@ -1,0 +1,109 @@
+/******* GLOBAL STYLES 4/28/2021 ************ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid red; */
+}
+:root {
+  font-family: sans-serif;
+  --clw: #fff;
+  --clb: #000;
+  --bxs: 0px 8px 10px -10px #888888;
+}
+body {
+  line-height: 2em;
+}
+.dropx {
+  /* font-size: 2em; */
+  /* font-weight: bold; */
+  /* cursor: pointer; */
+  /* background: none; */
+  /* border: none; */
+  /* transform: rotate(50deg); */
+}
+.header {
+  padding-top: 15px;
+  position: relative;
+  /* background: lightgreen; */
+  display: flex;
+  justify-content: space-around;
+  box-shadow: var(--bxs);
+}
+.navigation {
+  height: 0;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+ul li {
+  border-bottom: 1px solid #fff;
+}
+ul li a {
+  padding-left: 30px;
+}
+li a {
+  list-style: none;
+  padding: 10px 0 10px 0.7rem;
+}
+li:last-of-type {
+  border-bottom: none;
+}
+a {
+  text-decoration: none;
+  color: #848a87;
+}
+.navigation a {
+  display: block;
+  width: 100vw;
+  transition: 0.5s;
+}
+.navigation a:hover {
+  background: lightblue;
+  color: darkgrey;
+  font-size: 1.2em;
+}
+.main-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  transition: 0.5s;
+}
+.social {
+  display: none;
+}
+.social li {
+  list-style: none;
+}
+.show-links {
+  /* height: 13.188rem; */
+  height: 18rem;
+}
+.lowermain {
+  margin-top: 18rem;
+}
+.navtoglab span,
+.navtoglab span::before,
+.navtoglab span::after {
+  position: relative;
+  display: block;
+  background: #000;
+  height: 4px;
+  width: 2em;
+}
+.navtoglab span::before,
+.navtoglab span::after {
+  content: "";
+  position: absolute;
+}
+.navtoglab span::before {
+  bottom: 7px;
+}
+.navtoglab span::after {
+  top: 7px;
+}

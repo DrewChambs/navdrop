@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NavDropMenu</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        height: 100px;
+      }
+      nav {
+        /* display: flex; */
+        overflow: hidden;
+        background: grey;
+        height: 80px;
+        padding-top: 20px;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        /* margin-bottom: 45px; */
+      }
+      a {
+        text-decoration: none;
+        padding: 25px;
+        text-transform: uppercase;
+        color: #000;
+      }
+      nav ul li a:hover {
+        /* background: lightblue;
+        color: #fff; */
+        /* letter-spacing: 3px; */
+      }
+      h1 {
+        margin-bottom: 30px;
+      }
+      p {
+        /* width: 60%; */
+      }
+      .game-container {
+        border: 5px solid #000;
+        border-radius: 5px;
+        padding: 20px;
+        line-height: 1.5em;
+        width: 60%;
+        height: 300px;
+        margin: 0 auto;
+        background: lightblue;
+      }
+      .game-content {
+        text-align: center;
+      }
+      .form {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="transitions.html">Transitions</a></li>
+          <li><a href="game.html">game</a></li>
+          <li><a href="navdropmenu.html">Dropdown Project</a></li>
+          <li><a href="#">Last</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="game-container">
+      <div class="game-content">
+        <h1>Number guessing game</h1>
+        <p>
+          We have selected a random number between 1 and 100. See if you can
+          guess it in 10 turns or fewer. We'll tell you if your guess was t oo
+          high or too low.
+        </p>
+
+        <div class="form">
+          <label for="guessField">Enter a guess: </label>
+          <input type="text" id="guessField" class="guessField" />
+          <input type="submit" value="Submit guess" class="guessSubmit" />
+        </div>
+
+        <div class="resultParas">
+          <p class="guesses"></p>
+          <p class="lastResult"></p>
+          <p class="lowOrHi"></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="nav.js"></script>
+    <!-- <script type="text/javascript" src="nav.js" defer></script> -->
+  </body>
+</html>

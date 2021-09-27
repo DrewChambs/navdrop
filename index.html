@@ -5,107 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Navbar2Projects</title>
-  <style>
-/******* GLOBAL STYLES 4/28/2021 ************ */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      /* outline: 1px solid red; */
-    }
-    :root {
-      font-family: sans-serif;
-      --clw: #fff;
-      --clb: #000;
-      --bxs: 0px 8px 10px -10px #888888;
-    }
-    body {
-      line-height: 2em;
-    }
-    .dropx {
-      font-size: 2em;
-      font-weight: bold;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-    .header {
-      padding-top: 15px;
-      position: relative;
-      /* background: lightgreen; */
-      display: flex;
-      justify-content: space-around;
-      box-shadow: var(--bxs);
-    }
-    .navigation {
-      height: 0;
-      display: flex;
-      overflow: hidden;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      transition: .5s;
-    }
-    ul li {
-      border-bottom: 1px solid #fff;
-    }
-    ul li a {
-      padding-left: 30px;
-    }
-    li a {
-      list-style: none;
-      padding: 10px 0 10px .7rem;
-    }
-    li:last-of-type {
-      border-bottom: none;
-    }
-    a {
-      text-decoration: none;
-      color: #848a87;
-    }
-    .navigation a {
-      display: block;
-      width: 100vw;
-      transition: .5s;
-    }
-    .navigation a:hover {
-      background: lightblue;
-      color: darkgrey;
-      font-size: 1.2em;
-    }
-    .main-content {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      transition: .5s;
-    }
-    .social {
-      display: none;
-    }
-    .social li {
-      list-style: none;
-    }
-    .show-links {
-      height: 13.188rem;
-    }
-    .lowermain {
-      margin-top: 13.188rem;
-    }
 
-  </style>
+  <link rel="stylesheet" href="nav.css">
+
 </head>
 <body>
   <header class="header">
     <h1 class="logo">FlexBoxNav2</h1>
-    <button class="dropx">X</button>
+    <!-- <button class="dropx">X</button> -->
     <nav class="navigation">
       <ul class="links">
-        <li><a href="#">Home</a></li>
-        <li><a href="transitions.html">Transitions</a></li>
+        <li><a href="index.html">home</a></li>
+        <li><a href="transitions.html">transitions</a></li>
+        <li><a href="game.html">game</a></li>
         <li><a href="navdropmenu.html">Dropdown Project</a></li>
-        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Last</a></li>
       </ul>
       <ul class="social">
         <li><a href="#">FB</a></li>
@@ -114,6 +28,8 @@
         <li><a href="#">TW</a></li>
       </ul>
     </nav>
+    <label for="nav-tog" class="navtoglab">
+      <span class="dropx"></span>
   </header>
   <main class="main-content">
     <h2>Tester</h2>
@@ -124,14 +40,6 @@
   <footer class="footer">
 
   </footer>
-<script>
-      const nav = document.querySelector(".dropx");
-      const navigation = document.querySelector(".navigation");
-      const contentpage = document.querySelector(".main-content");
-      nav.addEventListener("click", function() {
-        navigation.classList.toggle("show-links");
-        contentpage.classList.toggle("lowermain");
-      });
-</script>
+  <script src="nav.js"></script>
 </body>
 </html>
